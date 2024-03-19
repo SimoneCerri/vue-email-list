@@ -29,13 +29,18 @@ createApp
                 this.createEmailOnce()
                 i++
             }
-            console.log(this.emailList);
+            /* if(i = 10)
+                {
+                    this.ready = true
+                } */
+            //this.readyCheck()
+            //this.ready = true
         },
         readyCheck()
         {
-            if (this.emailList.length = 10)
+            if (this.emailList.length == 10)
             {
-                ready = true
+                this.ready = true
             }
             console.log(this.ready);
         }
@@ -47,7 +52,7 @@ createApp
     beforeMount()
     {
         this.createEmailsX10()
-        this.readyCheck()
+        //this.readyCheck()
     },
     created()
     {
