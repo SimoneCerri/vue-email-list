@@ -34,21 +34,48 @@ createApp
                 i++
             }
             console.log(this.emailList);
+            //this.ready = true
             //this.readyCheck()
             //console.log(this.ready);
         },
         readyCheck()
         {
-            if (this.emailList.length === 10)
+            if (this.emailList.length = 10)
             {
                 ready = true
             }
             console.log(this.ready);
         }
     },
+    setup()
+    {
+        //this.createEmails_10()
+        /* createMailsSetup()
+        {
+            let i = 0
+            while(i < 10)
+            {
+                axios
+                .get('https://flynn.boolean.careers/exercises/api/random/mail')
+                .then((response) =>
+                {
+                    //console.log(response.data.response);
+                    let emailObj = response.data.response
+                    this.emailList.push(emailObj)
+                    //console.log(this.emailList);
+                }) 
+                i++ 
+            }    
+        } */
+ 
+    },
+    beforeMount()
+    {
+        //this.createEmails_10()
+    },
     created()
     {
-        this.createEmails_10()
+        //this.createEmails_10()
     },
     mounted()
     {
@@ -73,8 +100,6 @@ createApp
         //console.log(this.emailList);
         this.readyCheck()
         //console.log(this.ready);
-
-
     },
     updated()
     {
